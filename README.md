@@ -55,13 +55,12 @@ REQUISITOS NÃO-FUNCIONAIS:
 - Cobrança de mensalidade do motorista.
 - Pagamento mensal, semestral ou anual.
 - Formas de pagamento: Crédito, Débito, Pix e Boleto.
-
-#CASO DE USO
+- 
+CASO DE USO:
 ![image](https://github.com/user-attachments/assets/e604728e-9061-4a89-afb2-a18ba18d1716)
 
 
-
-#DIAGRAMA DE CLASSE
+DIAGRAMA DE CLASSE:
 ![image](https://github.com/user-attachments/assets/79c3b5c5-b5cc-43aa-9335-09720876ad4d)
 
 
