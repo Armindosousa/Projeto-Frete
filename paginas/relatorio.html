@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório de Viagens - Frete Magia</title>
+    <link rel="stylesheet" href="../acoes/style.css">
+</head>
+<body>
+    <main>
+        <h2>Relatório de Viagens</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Destino</th>
+                    <th>Data</th>
+                    <th>Preço</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    require '../php/conexao.php';
+                    $usuario_id = $_SESSION['usuario']['id'];
+                    $result = mysqli_query($conn, "SELECT id, destino, data_agendamento, preco, status FROM fretes WHERE usuario_id = '$usuario_id'");
+                    while ($frete = mysqli_fetch_assoc($result)) {
+                        echo "<tr>
+                                <td>{$frete['id']}</td>
+                                <td>{$frete['destino']}</td>
+                                <td>{$frete['data_agendamento']}</td>
+                                <td>R$ {$frete['preco']}</td>
+                                <td>{$frete['status']}</td>
+                            </tr>";
+                    }
+                ?>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

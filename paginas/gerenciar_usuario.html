@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciar Conta - Frete Magia</title>
+    <link rel="stylesheet" href="../acoes/style.css">
+    <link rel="stylesheet" href="../acoes/gerenciarUsuario.css">
+</head>
+<body>
+    <main>
+        <h2>Gerenciar Conta</h2>
+
+        <a href="../paginas/cancelamento.php">Cancelar Frete</a>
+        
+        <!-- Exibe mensagens de sucesso ou erro -->
+        <?php if (isset($_GET['success'])): ?>
+            <p class="success-message">Dados atualizados com sucesso!</p>
+        <?php elseif (isset($_GET['error'])): ?>
+            <p class="error-message">Ocorreu um erro. Tente novamente.</p>
+        <?php endif; ?>
+
+        <!-- Formulário para atualização dos dados -->
+        <form method="POST" action="../validacoes/atualizar_usuario.php">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" value="<?php echo htmlspecialchars($usuario['nome']); ?>" required>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" value="<?php echo htmlspecialchars($usuario['email']); ?>" required>
+            <br>
+
+            <button type="submit" name="atualizar">Atualizar Dados</button>
+        </form>
+
+        <!-- Formulário para exclusão da conta -->
+        <form method="POST" action="../validacoes/excluir_usuario.php">
+            <button type="submit" name="excluir" style="color: red;">Excluir Conta</button>
+        </form>
+    </main>
+</body>
+</html>

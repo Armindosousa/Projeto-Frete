@@ -1,0 +1,41 @@
+/* Estilos para a página de cancelamento */
+main {
+   width: 50%;
+   margin: 50px auto;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+   color: #dc3545;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+   padding: 12px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   width: 100%;
+}
+
+button {
+   background-color: #dc3545;
+   padding: 10px;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: #c82333;
+}

@@ -1,0 +1,47 @@
+/* assets/css/confirmacao.css */
+
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f4f4f4;
+   color: #333;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+}
+
+main {
+   background-color: #fff;
+   padding: 20px;
+   max-width: 600px;
+   margin: 50px auto;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+   color: #28a745;
+}
+
+p {
+   font-size: 18px;
+}
+
+.btn {
+   display: inline-block;
+   margin: 10px;
+   padding: 10px 20px;
+   font-size: 16px;
+   text-decoration: none;
+   color: #fff;
+   background-color: #007bff;
+   border-radius: 4px;
+   transition: background-color 0.3s;
+}
+
+.btn:hover {
+   background-color: #0056b3;
+}
+
+.btn:active {
+   background-color: #004085;
+}

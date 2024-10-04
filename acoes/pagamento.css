@@ -1,0 +1,43 @@
+/* Estilos para a página de pagamento */
+main {
+   width: 50%;
+   margin: 50px auto;
+   background-color: #fff;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+   margin-bottom: 20px;
+   text-align: center;
+   color: #004080;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+input[type="text"],
+select {
+   padding: 12px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   width: 100%;
+}
+
+button {
+   background-color: #004080;
+   color: #fff;
+   padding: 12px;
+   font-size: 18px;
+   border-radius: 5px;
+   border: none;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: #007acc;
+}
