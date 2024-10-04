@@ -1,0 +1,37 @@
+drop database if exists armindofrete24;
+CREATE DATABASE IF NOT EXISTS armindofrete24;
+USE armindofrete24;
+
+USE armindofrete24;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    tipo ENUM('motorista', 'passageiro') NOT NULL,
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE fretes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT,              -- Passageiro
+    motorista_id INT,
+    origem varchar(255) NOT NULL,
+    destino VARCHAR(255) NOT NULL,
+    data_agendamento DATE NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    status ENUM('agendado', 'cancelado', 'concluido') DEFAULT 'agendado',
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+    FOREIGN KEY (motorista_id) REFERENCES usuarios(id),
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabela para armazenar cancelamentos de frete
+CREATE TABLE cancelamentos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    frete_id INT,
+    motivo VARCHAR(255) NOT NULL,
+    data_cancelamento TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (frete_id) REFERENCES fretes(id)
+);
