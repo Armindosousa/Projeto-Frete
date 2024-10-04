@@ -61,4 +61,5 @@ CASO DE USO
 
 
 DIAGRAMA DE CLASSE
+
 ![image](https://github.com/user-attachments/assets/79c3b5c5-b5cc-43aa-9335-09720876ad4d)
